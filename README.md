@@ -7,7 +7,7 @@ A curated list of recent papers from top systems and networking conferences (e.g
 
 * [**Cluster Management & Scheduling**](#cluster-management--scheduling)
 * [**Distributed Storage & Databases**](#distributed-storage--databases)
-* [**Networking & Traffic**](#networking--traffic)
+* [**Networking**](#networking)
 * [**Machine Learning Infrastructure**](#machine-learning-infrastructure)
 * [**Serverless & Microservices**](#serverless--microservices)
 * [**Reliability & Debugging**](#reliability--debugging)
@@ -34,7 +34,13 @@ A curated list of recent papers from top systems and networking conferences (e.g
 - [**Shard Manager: A Generic Shard Management Framework for Geo-distributed Applications**](https://dl.acm.org/doi/10.1145/3477132.3483546), _SOSP '21_ `[Meta]`
   - A framework that manages the placement and migration of shards for hundreds of different stateful services at Meta, decoupling this complex logic from application code.
 
-### Networking & Traffic
+### Networking 
+- [**Accessing Cloud with Disaggregated Software-Defined Router**](https://www.usenix.org/conference/nsdi21/presentation/shao), _NSDI '21_ `[Tencent]`
+  - Tencent's cloud gateway architecture that disaggregates router functionality into four independently scalable modules (access, forwarding, routing, SDN control), enabling rapid feature delivery while handling tens of Tbps of traffic.
+- [**Orion: Google's Software-Defined Networking Control Plane**](https://www.usenix.org/conference/nsdi21/presentation/ferguson), _NSDI '21_ `[Google]`
+  - Google's second-generation SDN control plane built on a microservice architecture with a pub-sub database, achieving 40x faster convergence and 1.16M network updates/sec across Jupiter datacenter and B4 WAN networks.
+- [**When Cloud Storage Meets RDMA**](https://www.usenix.org/conference/nsdi21/presentation/gao), _NSDI '21_ `[Alibaba]`
+  - Experience report on integrating RDMA into Alibaba's Pangu storage system, using podset-scoped RDMA with TCP fallback to halve client latency while maintaining high availability across exabyte-scale deployments.
 
 ### Machine Learning Infrastructure
 - [**MAST: Global Scheduling of ML Training across Geo-Distributed Datacenters at Hyperscale**](https://www.usenix.org/conference/osdi24/presentation/choudhury), _OSDI '24_ `[Meta]`
