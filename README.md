@@ -33,6 +33,8 @@ A curated list of recent papers from top systems and networking conferences (e.g
   - Meta's control plane storage system that allows hot-swapping the underlying consensus protocol (e.g., swapping ZooKeeper for a new protocol) without downtime.
 - [**Shard Manager: A Generic Shard Management Framework for Geo-distributed Applications**](https://dl.acm.org/doi/10.1145/3477132.3483546), _SOSP '21_ `[Meta]`
   - A framework that manages the placement and migration of shards for hundreds of different stateful services at Meta, decoupling this complex logic from application code.
+- [**HALP: Heuristic Aided Learned Preference Eviction Policy for YouTube Content Delivery Network**](https://www.usenix.org/conference/nsdi23/presentation/song-zhenyu), _NSDI '23_ `[Google]`
+  - An ML-augmented cache eviction policy for YouTube's CDN DRAM cache that combines heuristics with learned preferences, reducing byte miss ratio by 9.1% at peak traffic with only 1.8% CPU overhead in production.
 
 ### Networking 
 - [**Accessing Cloud with Disaggregated Software-Defined Router**](https://www.usenix.org/conference/nsdi21/presentation/shao), _NSDI '21_ `[Tencent]`
@@ -41,8 +43,22 @@ A curated list of recent papers from top systems and networking conferences (e.g
   - Google's second-generation SDN control plane built on a microservice architecture with a pub-sub database, achieving 40x faster convergence and 1.16M network updates/sec across Jupiter datacenter and B4 WAN networks.
 - [**When Cloud Storage Meets RDMA**](https://www.usenix.org/conference/nsdi21/presentation/gao), _NSDI '21_ `[Alibaba]`
   - Experience report on integrating RDMA into Alibaba's Pangu storage system, using podset-scoped RDMA with TCP fallback to halve client latency while maintaining high availability across exabyte-scale deployments.
+- [**Evolvable Network Telemetry at Facebook**](https://www.usenix.org/conference/nsdi22/presentation/zhou), _NSDI '22_ `[Meta]`
+  - Presents PCAT, a change-aware telemetry system that tracks and confines changes across Meta's rapidly evolving network (30+ code commits/week), preventing cascading failures in monitoring hundreds of thousands of switches and billions of counters.
+- [**Bluebird: High-performance SDN for Bare-metal Cloud Services**](https://www.usenix.org/conference/nsdi22/presentation/arumugam), _NSDI '22_ `[Microsoft]`
+  - Azure's network virtualization system for bare-metal cloud using programmable switch ASICs with custom P4 programs, delivering full line-rate up to 100Gb/s with sub-microsecond latency per SDN switch hop.
+- [**Cetus: Releasing P4 Programmers from the Chore of Trial and Error Compiling**](https://www.usenix.org/conference/nsdi22/presentation/li-yifan), _NSDI '22_ `[Alibaba]`
+  - A compiler that automatically transforms uncompilable P4 programs into functionally equivalent compilable ones by shortening dependency chains, reducing Alibaba's P4 development cycle from days to minutes.
+- [**Norma: Towards Practical Network Load Testing**](https://www.usenix.org/conference/nsdi23/presentation/chen-yanqing), _NSDI '23_ `[Alibaba]`
+  - A programmable-switch-based network load tester capable of generating up to 3 Tbps of stateful TCP traffic, deployed at Alibaba for over two years to detect performance issues in production network devices.
+- [**Empowering Azure Storage with RDMA**](https://www.usenix.org/conference/nsdi23/presentation/bai), _NSDI '23_ `[Microsoft]`
+  - Documents Microsoft's regional-scale RDMA deployment for Azure Storage, now carrying 70% of Azure traffic across all public regions, moving exabytes of data daily from TCP to RDMA with significant latency and CPU savings.
 
 ### Machine Learning Infrastructure
+- [**Check-N-Run: a Checkpointing System for Training Deep Learning Recommendation Models**](https://www.usenix.org/conference/nsdi22/presentation/eisenman), _NSDI '22_ `[Meta]`
+  - A scalable checkpointing system for Meta's terabyte-scale recommendation models that uses incremental checkpointing and quantization to achieve 6-17x reduction in write bandwidth and 2.5-8x reduction in storage capacity.
+- [**MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters**](https://www.usenix.org/conference/nsdi22/presentation/weng), _NSDI '22_ `[Alibaba]`
+  - A characterization study of Alibaba's PAI GPU cluster (6,742+ GPUs, 1,300+ users), revealing low utilization and long queueing delays, and proposing GPU sharing and reserving-and-packing scheduling policies to improve efficiency.
 - [**MAST: Global Scheduling of ML Training across Geo-Distributed Datacenters at Hyperscale**](https://www.usenix.org/conference/osdi24/presentation/choudhury), _OSDI '24_ `[Meta]`
   - Addresses the GPU shortage by enabling Meta to train large models across *distributed* global datacenters, overcoming massive bandwidth constraints.
 
