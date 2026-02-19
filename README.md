@@ -53,6 +53,12 @@ A curated list of recent papers from top systems and networking conferences (e.g
   - A programmable-switch-based network load tester capable of generating up to 3 Tbps of stateful TCP traffic, deployed at Alibaba for over two years to detect performance issues in production network devices.
 - [**Empowering Azure Storage with RDMA**](https://www.usenix.org/conference/nsdi23/presentation/bai), _NSDI '23_ `[Microsoft]`
   - Documents Microsoft's regional-scale RDMA deployment for Azure Storage, now carrying 70% of Azure traffic across all public regions, moving exabytes of data daily from TCP to RDMA with significant latency and CPU savings.
+- [**Harnessing WebRTC for Large-Scale Live Streaming**](https://dl.acm.org/doi/10.1145/3718958.3750535), _SIGCOMM '25_ `[ByteDance]`
+  - ByteDance's production system for adapting WebRTC to large-scale live streaming, optimizing first-frame delay, startup rebuffering, audio-to-video drift, and per-session CPU usage.
+- [**Intent-Driven Network Management with Multi-Agent LLMs: The Confucius Framework**](https://dl.acm.org/doi/10.1145/3718958.3750537), _SIGCOMM '25_ `[ByteDance]`
+  - A multi-agent LLM framework for network management that models workflows as DAGs, integrates LLMs with existing tools via RAG, and has been operational for two years with 60+ applications, reducing developer time by 17 engineer-hours/week.
+- [**Alibaba Stellar: A New Generation RDMA Network for Cloud AI**](https://dl.acm.org/doi/10.1145/3718958.3750539), _SIGCOMM '25_ `[Alibaba]`
+  - Alibaba's RDMA virtualization stack for cloud AI, introducing para-virtualized DMA for on-demand memory pinning, an extended memory translation table for GPUDirect RDMA, and RDMA packet spray for efficient multi-path utilization.
 
 ### Machine Learning Infrastructure
 - [**Check-N-Run: a Checkpointing System for Training Deep Learning Recommendation Models**](https://www.usenix.org/conference/nsdi22/presentation/eisenman), _NSDI '22_ `[Meta]`
@@ -67,6 +73,11 @@ A curated list of recent papers from top systems and networking conferences (e.g
   - AWS describes the VMM behind Lambda, which stripped down QEMU to create "MicroVMs" that boot in <125ms for true multi-tenant isolation.
 - [**ServiceRouter: Hyperscale and Minimal Cost Service Mesh at Meta**](https://www.usenix.org/conference/osdi23/presentation/saokar), _OSDI '23_ `[Meta]`
   - Meta's take on a service mesh optimized for hyperscale, focusing on minimizing the "sidecar tax" (CPU/RAM overhead) that standard meshes incur.
+- [**Hermes: Enhancing Layer-7 Cloud Load Balancers with Userspace-Directed I/O Event Notification**](https://dl.acm.org/doi/10.1145/3718958.3750469), _SIGCOMM '25_ `[Alibaba]`
+  - An eBPF-based framework that enables closed-loop scheduling between userspace workers and the kernel for L7 load balancers, processing 10M+ requests/sec on 100K CPU cores with 19% infrastructure cost reduction, deployed for over two years.
 
 ### Reliability & Debugging
-
+- [**Towards LLM-Based Failure Localization in Production-Scale Networks**](https://dl.acm.org/doi/10.1145/3718958.3750505), _SIGCOMM '25_ `[Alibaba]`
+  - BiAn, an LLM-based framework that processes monitoring data to rank error devices with explanations during network incidents, reducing root-cause time by 20.5% overall (55.2% for high-risk incidents) across 10 months of production deployment.
+- [**SkeletonHunter: Diagnosing and Localizing Network Failures in Containerized Large Model Training**](https://dl.acm.org/doi/10.1145/3718958.3750513), _SIGCOMM '25_ `[Alibaba]`
+  - A network diagnosis system that exploits the intrinsic traffic sparsity in large model training to detect and localize failures, achieving 98.2% precision and 95.7% localization accuracy across 40K+ GPUs at Alibaba Cloud.
